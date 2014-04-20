@@ -7,6 +7,7 @@
 //
 
 #import "CFIXAddNewItemViewController.h"
+#import "CorePlot-CocoaTouch.h"
 
 @interface CFIXAddNewItemViewController ()
 
