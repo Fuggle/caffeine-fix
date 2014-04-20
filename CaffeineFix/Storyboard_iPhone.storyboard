@@ -7,7 +7,6 @@
         <!--View Controller - My dashboard-->
         <scene sceneID="hzd-YK-otD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a72-Yi-xG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="BoA-4g-Zuo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1kp-ZB-u3v">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -22,6 +21,7 @@
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a72-Yi-xG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="957" y="4"/>
         </scene>
