@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CFIXNewItem.h"
 
 @interface CFIXAddNewItemViewController : UIViewController
+
+@property CFIXNewItem *item;
 
 @end

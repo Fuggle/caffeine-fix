@@ -8,6 +8,7 @@
 
 #import "CFIXItemListTableViewController.h"
 #import "CFIXNewItem.h"
+#import "CFIXAddNewItemViewController.h"
 
 @interface CFIXItemListTableViewController ()
 
@@ -16,6 +17,16 @@
 @end
 
 @implementation CFIXItemListTableViewController
+
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue
+{
+    CFIXAddNewItemViewController *source = [segue sourceViewController];
+    CFIXNewItem *item = source.item;
+    if (item != nil) {
+        [self.caffeineItems addObject:item];
+        [self.tableView reloadData];
+    }
+}
 
 - (void)loadInitialData {
 

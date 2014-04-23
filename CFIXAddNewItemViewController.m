@@ -10,10 +10,22 @@
 #import "CorePlot-CocoaTouch.h"
 
 @interface CFIXAddNewItemViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 
 @end
 
 @implementation CFIXAddNewItemViewController
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if (sender != self.doneButton) return;
+    if (self.textField.text.length > 0) {
+        self.item = [[CFIXNewItem alloc] init];
+        self.item.itemName = self.textField.text;
+        self.item.completed = NO;
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
