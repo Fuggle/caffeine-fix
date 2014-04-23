@@ -18,17 +18,7 @@
 @implementation CFIXItemListTableViewController
 
 - (void)loadInitialData {
-    CFIXNewItem *item1 = [[CFIXNewItem alloc] init];
-    item1.itemName = @"1 Shot";
-    [self.caffeineItems addObject:item1];
-    
-    CFIXNewItem *item2 = [[CFIXNewItem alloc] init];
-    item2.itemName = @"2 shot";
-    [self.caffeineItems addObject:item2];
-    
-    CFIXNewItem *item3 = [[CFIXNewItem alloc] init];
-    item3.itemName = @"Earl Grey";
-    [self.caffeineItems addObject:item3];
+
 }
 
 - (void)viewDidLoad
@@ -40,6 +30,17 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    CFIXNewItem *item1 = [[CFIXNewItem alloc] init];
+    item1.itemName = @"1 Shot";
+    [self.caffeineItems addObject:item1];
+    
+    CFIXNewItem *item2 = [[CFIXNewItem alloc] init];
+    item2.itemName = @"2 shot";
+    [self.caffeineItems addObject:item2];
+    
+    CFIXNewItem *item3 = [[CFIXNewItem alloc] init];
+    item3.itemName = @"Earl Grey";
+    [self.caffeineItems addObject:item3];
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,6 +60,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
+    //NSLog(@" data tableView %@", self.caffeineItems.count);
     return [self.caffeineItems count];
 }
 
