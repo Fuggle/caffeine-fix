@@ -72,6 +72,12 @@
     CFIXNewItem *items = [self.caffeineItems objectAtIndex:indexPath.row];
     cell.textLabel.text = items.itemName;
     
+    if (items.completed) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
     return cell;
 }
 
@@ -129,5 +135,13 @@
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 */
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    CFIXNewItem *tappedItem = [self.caffeineItems objectAtIndex:indexPath.row];
+    tappedItem.completed = !tappedItem.completed;
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+}
 
 @end
