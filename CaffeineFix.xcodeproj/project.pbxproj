@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2490343C190360EE0092D207 /* CFIXNewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2490343B190360EE0092D207 /* CFIXNewItem.m */; };
+		249E97A5190BA56C0027D779 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249E97A4190BA56C0027D779 /* CoreData.framework */; };
+		249E97A8190BA70C0027D779 /* CFIXDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 249E97A6190BA70C0027D779 /* CFIXDataModel.xcdatamodeld */; };
 		24BC48F61903677F0052EFA8 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24BC48F81903677F0052EFA8 /* Storyboard_iPhone.storyboard */; };
 		24BC48FC19036A420052EFA8 /* CFIXAddNewItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BC48FA19036A420052EFA8 /* CFIXAddNewItemViewController.m */; };
 		24BC48FD19036A420052EFA8 /* CFIXAddNewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BC48FB19036A420052EFA8 /* CFIXAddNewItemViewController.xib */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		2490343A190360EE0092D207 /* CFIXNewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIXNewItem.h; sourceTree = "<group>"; };
 		2490343B190360EE0092D207 /* CFIXNewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIXNewItem.m; sourceTree = "<group>"; };
+		249E97A4190BA56C0027D779 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		249E97A7190BA70C0027D779 /* CFIXDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CFIXDataModel.xcdatamodel; sourceTree = "<group>"; };
 		24BC48F71903677F0052EFA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
 		24BC48F919036A420052EFA8 /* CFIXAddNewItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIXAddNewItemViewController.h; sourceTree = "<group>"; };
 		24BC48FA19036A420052EFA8 /* CFIXAddNewItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIXAddNewItemViewController.m; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				249E97A5190BA56C0027D779 /* CoreData.framework in Frameworks */,
 				4399CBAF1903F1D700D6346F /* QuartzCore.framework in Frameworks */,
 				4399CB5E1903E86F00D6346F /* libCorePlot-CocoaTouch.a in Frameworks */,
 				24CC72FB18FBA31D00799FCB /* CoreGraphics.framework in Frameworks */,
@@ -279,6 +284,7 @@
 		24CC72F718FBA31D00799FCB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				249E97A4190BA56C0027D779 /* CoreData.framework */,
 				24F135BD19077052005928CD /* CorePlotHeaders */,
 				24F1360C19077052005928CD /* libCorePlot-CocoaTouch.a */,
 				4399CBAE1903F1D700D6346F /* QuartzCore.framework */,
@@ -305,6 +311,7 @@
 				2490343B190360EE0092D207 /* CFIXNewItem.m */,
 				24CC730A18FBA31D00799FCB /* Images.xcassets */,
 				24CC72FF18FBA31D00799FCB /* Supporting Files */,
+				249E97A6190BA70C0027D779 /* CFIXDataModel.xcdatamodeld */,
 			);
 			path = CaffeineFix;
 			sourceTree = "<group>";
@@ -611,6 +618,7 @@
 				24BC48FC19036A420052EFA8 /* CFIXAddNewItemViewController.m in Sources */,
 				24CC730918FBA31D00799FCB /* CFIXAppDelegate.m in Sources */,
 				24CC730518FBA31D00799FCB /* main.m in Sources */,
+				249E97A8190BA70C0027D779 /* CFIXDataModel.xcdatamodeld in Sources */,
 				24BC490119036B010052EFA8 /* CFIXItemListTableViewController.m in Sources */,
 				2490343C190360EE0092D207 /* CFIXNewItem.m in Sources */,
 			);
@@ -841,6 +849,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		249E97A6190BA70C0027D779 /* CFIXDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				249E97A7190BA70C0027D779 /* CFIXDataModel.xcdatamodel */,
+			);
+			currentVersion = 249E97A7190BA70C0027D779 /* CFIXDataModel.xcdatamodel */;
+			path = CFIXDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 24CC72ED18FBA31D00799FCB /* Project object */;
 }
