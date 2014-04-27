@@ -38,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="885" y="4"/>
         </scene>
-        <!--View Controller-->
+        <!--Stat View Controller - chart-->
         <scene sceneID="45l-OM-NLk">
             <objects>
-                <viewController id="bA5-en-LMf" sceneMemberID="viewController">
+                <viewController title="chart" id="bA5-en-LMf" customClass="CFIXStatViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Isz-he-gqb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
