@@ -28,6 +28,10 @@
 		24CC731C18FBA31D00799FCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24CC731A18FBA31D00799FCB /* InfoPlist.strings */; };
 		24CC731E18FBA31D00799FCB /* CaffeineFixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CC731D18FBA31D00799FCB /* CaffeineFixTests.m */; };
 		24F1360D19077052005928CD /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F1360C19077052005928CD /* libCorePlot-CocoaTouch.a */; };
+		434D4B39190CF498002995AC /* UIKit+DrawingHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D4B38190CF498002995AC /* UIKit+DrawingHelpers.m */; };
+		434D4B3F190CF4E3002995AC /* LCLegendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D4B3C190CF4E3002995AC /* LCLegendView.m */; };
+		434D4B40190CF4E3002995AC /* LCLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D4B3E190CF4E3002995AC /* LCLineChartView.m */; };
+		434D4B43190CF4EE002995AC /* LCInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D4B42190CF4EE002995AC /* LCInfoView.m */; };
 		4399CB5E1903E86F00D6346F /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4399CB5D1903E83900D6346F /* libCorePlot-CocoaTouch.a */; };
 		4399CBAF1903F1D700D6346F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4399CBAE1903F1D700D6346F /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -149,6 +153,14 @@
 		24F1360A19077052005928CD /* NSDecimalNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDecimalNumberExtensions.h; sourceTree = "<group>"; };
 		24F1360B19077052005928CD /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		24F1360C19077052005928CD /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
+		434D4B38190CF498002995AC /* UIKit+DrawingHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIKit+DrawingHelpers.m"; sourceTree = "<group>"; };
+		434D4B3A190CF4A0002995AC /* UIKit+DrawingHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIKit+DrawingHelpers.h"; sourceTree = "<group>"; };
+		434D4B3B190CF4E3002995AC /* LCLegendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCLegendView.h; sourceTree = "<group>"; };
+		434D4B3C190CF4E3002995AC /* LCLegendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCLegendView.m; sourceTree = "<group>"; };
+		434D4B3D190CF4E3002995AC /* LCLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCLineChartView.h; sourceTree = "<group>"; };
+		434D4B3E190CF4E3002995AC /* LCLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCLineChartView.m; sourceTree = "<group>"; };
+		434D4B41190CF4EE002995AC /* LCInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCInfoView.h; sourceTree = "<group>"; };
+		434D4B42190CF4EE002995AC /* LCInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCInfoView.m; sourceTree = "<group>"; };
 		4399CB0F1903E83900D6346F /* CorePlot-CocoaTouch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CorePlot-CocoaTouch.h"; sourceTree = "<group>"; };
 		4399CB101903E83900D6346F /* CPTAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPTAnimation.h; sourceTree = "<group>"; };
 		4399CB111903E83900D6346F /* CPTAnimationOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPTAnimationOperation.h; sourceTree = "<group>"; };
@@ -303,12 +315,20 @@
 			children = (
 				24CC730718FBA31D00799FCB /* CFIXAppDelegate.h */,
 				24CC730818FBA31D00799FCB /* CFIXAppDelegate.m */,
-				24BC48F81903677F0052EFA8 /* Storyboard_iPhone.storyboard */,
 				24BC48FE19036B010052EFA8 /* CFIXItemListTableViewController.h */,
 				24BC48FF19036B010052EFA8 /* CFIXItemListTableViewController.m */,
 				24BC490019036B010052EFA8 /* CFIXItemListTableViewController.xib */,
 				2490343A190360EE0092D207 /* CFIXNewItem.h */,
 				2490343B190360EE0092D207 /* CFIXNewItem.m */,
+				24BC48F81903677F0052EFA8 /* Storyboard_iPhone.storyboard */,
+				434D4B41190CF4EE002995AC /* LCInfoView.h */,
+				434D4B42190CF4EE002995AC /* LCInfoView.m */,
+				434D4B3B190CF4E3002995AC /* LCLegendView.h */,
+				434D4B3C190CF4E3002995AC /* LCLegendView.m */,
+				434D4B3D190CF4E3002995AC /* LCLineChartView.h */,
+				434D4B3A190CF4A0002995AC /* UIKit+DrawingHelpers.h */,
+				434D4B38190CF498002995AC /* UIKit+DrawingHelpers.m */,
+				434D4B3E190CF4E3002995AC /* LCLineChartView.m */,
 				24CC730A18FBA31D00799FCB /* Images.xcassets */,
 				24CC72FF18FBA31D00799FCB /* Supporting Files */,
 				249E97A6190BA70C0027D779 /* CFIXDataModel.xcdatamodeld */,
@@ -616,11 +636,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				24BC48FC19036A420052EFA8 /* CFIXAddNewItemViewController.m in Sources */,
+				434D4B43190CF4EE002995AC /* LCInfoView.m in Sources */,
 				24CC730918FBA31D00799FCB /* CFIXAppDelegate.m in Sources */,
+				434D4B3F190CF4E3002995AC /* LCLegendView.m in Sources */,
 				24CC730518FBA31D00799FCB /* main.m in Sources */,
 				249E97A8190BA70C0027D779 /* CFIXDataModel.xcdatamodeld in Sources */,
+				434D4B39190CF498002995AC /* UIKit+DrawingHelpers.m in Sources */,
 				24BC490119036B010052EFA8 /* CFIXItemListTableViewController.m in Sources */,
 				2490343C190360EE0092D207 /* CFIXNewItem.m in Sources */,
+				434D4B40190CF4E3002995AC /* LCLineChartView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
