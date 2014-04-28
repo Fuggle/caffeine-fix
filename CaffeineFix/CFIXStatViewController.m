@@ -117,7 +117,7 @@
         LCLineChartData *d = [LCLineChartData new];
         d.xMin = 1;
         d.xMax = 31;
-        d.title = @"The title for the legend";
+        d.title = @"Caffeine Intake";
         d.color = [UIColor redColor];
         d.itemCount = 10;
         
