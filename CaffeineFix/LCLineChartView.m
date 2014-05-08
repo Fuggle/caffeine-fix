@@ -2,8 +2,8 @@
 //  LCLineChartView.m
 //  
 //
-//  Created by Marcel Ruegenberg on 02.08.13.
-//
+//  Created by Huang Jiewei on 27/04/14.
+//  Copyright (c) 2014 ___COFFEENINE___. All rights reserved.
 //
 
 #import "LCLineChartView.h"

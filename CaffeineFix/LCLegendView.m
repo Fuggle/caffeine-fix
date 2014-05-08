@@ -2,8 +2,8 @@
 //  LCLegendView.m
 //  ios-linechart
 //
-//  Created by Marcel Ruegenberg on 02.08.13.
-//  Copyright (c) 2013 Marcel Ruegenberg. All rights reserved.
+//  Created by Huang Jiewei on 27/04/14.
+//  Copyright (c) 2014 ___COFFEENINE___. All rights reserved.
 //
 
 #import "LCLegendView.h"

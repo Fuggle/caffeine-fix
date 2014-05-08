@@ -2,8 +2,8 @@
 //  DrawingHelpers.m
 //  Planner
 //
-//  Created by Marcel Ruegenberg on 21.09.09.
-//  Copyright 2009 Dustlab. All rights reserved.
+//  Created by Huang Jiewei on 27/04/14.
+//  Copyright (c) 2014 ___COFFEENINE___. All rights reserved.
 //
 
 #import "UIKit+DrawingHelpers.h"

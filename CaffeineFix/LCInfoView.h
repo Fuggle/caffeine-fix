@@ -2,8 +2,8 @@
 //  LCInfoView.h
 //  Classes
 //
-//  Created by Marcel Ruegenberg on 19.11.09.
-//  Copyright 2009-2011 Dustlab. All rights reserved.
+//  Created by Huang Jiewei on 27/04/14.
+//  Copyright (c) 2014 ___COFFEENINE___. All rights reserved.
 //
 
 @interface LCInfoView : UIView
