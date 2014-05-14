@@ -31,6 +31,7 @@
     }
     
     // first sample chart view:
+    /*
     {
         LCLineChartData *d1x = ({
             LCLineChartData *d1 = [LCLineChartData new];
@@ -110,9 +111,10 @@
         //    chartView.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0]; // Uncomment for custom background color.
         
         [self.view addSubview:chartView];
-    }
+    }*/
     
     // second sample chart view
+  
     {
         LCLineChartData *d = [LCLineChartData new];
         d.xMin = 1;
@@ -135,7 +137,7 @@
             return [LCLineChartDataItem dataItemWithX:x y:y xLabel:label1 dataLabel:label2];
         };
         
-        LCLineChartView *chartView = [[LCLineChartView alloc] initWithFrame:CGRectMake(20, 700, 500, 300)];
+        LCLineChartView *chartView = [[LCLineChartView alloc] initWithFrame:CGRectMake(20, 130, 700, 300)];
         chartView.yMin = 0;
         chartView.yMax = powf(2, 31 / 7) + 0.5;
         chartView.ySteps = @[@"0.0",
