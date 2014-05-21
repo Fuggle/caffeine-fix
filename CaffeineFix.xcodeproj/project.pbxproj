@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24539004192C7C700099CCBF /* DrinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 24539003192C7C700099CCBF /* DrinkList.m */; };
 		2490343C190360EE0092D207 /* CFIXNewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2490343B190360EE0092D207 /* CFIXNewItem.m */; };
 		249E97A5190BA56C0027D779 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249E97A4190BA56C0027D779 /* CoreData.framework */; };
 		249E97A8190BA70C0027D779 /* CFIXDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 249E97A6190BA70C0027D779 /* CFIXDataModel.xcdatamodeld */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24539002192C7C700099CCBF /* DrinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkList.h; sourceTree = "<group>"; };
+		24539003192C7C700099CCBF /* DrinkList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkList.m; sourceTree = "<group>"; };
 		2490343A190360EE0092D207 /* CFIXNewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIXNewItem.h; sourceTree = "<group>"; };
 		2490343B190360EE0092D207 /* CFIXNewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIXNewItem.m; sourceTree = "<group>"; };
 		249E97A4190BA56C0027D779 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -337,6 +340,8 @@
 				24CC730A18FBA31D00799FCB /* Images.xcassets */,
 				24CC72FF18FBA31D00799FCB /* Supporting Files */,
 				249E97A6190BA70C0027D779 /* CFIXDataModel.xcdatamodeld */,
+				24539002192C7C700099CCBF /* DrinkList.h */,
+				24539003192C7C700099CCBF /* DrinkList.m */,
 			);
 			path = CaffeineFix;
 			sourceTree = "<group>";
@@ -650,6 +655,7 @@
 				434D4B39190CF498002995AC /* UIKit+DrawingHelpers.m in Sources */,
 				24BC490119036B010052EFA8 /* CFIXItemListTableViewController.m in Sources */,
 				2490343C190360EE0092D207 /* CFIXNewItem.m in Sources */,
+				24539004192C7C700099CCBF /* DrinkList.m in Sources */,
 				434D4B40190CF4E3002995AC /* LCLineChartView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

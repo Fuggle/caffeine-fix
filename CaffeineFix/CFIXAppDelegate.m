@@ -7,6 +7,7 @@
 //
 
 #import "CFIXAppDelegate.h"
+#import "DrinkList.h"
 
 @implementation CFIXAppDelegate
 
@@ -14,10 +15,53 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    /*NSManagedObjectContext *context = [self managedObjectContext];
+    DrinkList *DrinkList = [NSEntityDescription
+                                       insertNewObjectForEntityForName:@"DrinkList"
+                                       inManagedObjectContext:context];
+    [DrinkList setValue:@"Test DRINK" forKey:@"drinkName"];
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    
+    //fetch the data.
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"DrinkList" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    for (NSManagedObject *info in fetchedObjects) {
+        NSLog(@"Drink: %@", [info valueForKey:@"drinkName"]);
+    }*/
+    NSManagedObjectContext *context = [self managedObjectContext];
+    DrinkList *drinks = [NSEntityDescription
+                                      insertNewObjectForEntityForName:@"DrinkList"
+                                      inManagedObjectContext:context];
+    drinks.drinkName = @"Test drinks";
+
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    
+    // Test listing all FailedBankInfos from the store
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"DrinkList"
+                                              inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    for (DrinkList *info in fetchedObjects) {
+        NSLog(@"Drink: %@", info.drinkName);
+    }
     return YES;
 }
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -74,6 +118,12 @@
     if (coordinator != nil) {
         _managedObjectContext = [[NSManagedObjectContext alloc] init];
         [_managedObjectContext setPersistentStoreCoordinator:coordinator];
+    }
+    
+    if (_managedObjectContext == nil)
+    {
+        _managedObjectContext = [[NSManagedObjectContext alloc] init];
+        [_managedObjectContext setPersistentStoreCoordinator:[self persistentStoreCoordinator]];
     }
     return _managedObjectContext;
 }

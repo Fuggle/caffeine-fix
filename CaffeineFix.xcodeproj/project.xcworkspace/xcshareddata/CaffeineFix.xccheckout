@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>B94A5195-F66F-4BC9-8F6F-50B2E3F5C19E</string>
+	<string>AD13FF85-22AA-4F61-8141-E26EB8BC8735</string>
 	<key>IDESourceControlProjectName</key>
 	<string>CaffeineFix</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>4D9A2C80-0F0F-475E-828C-A8B2DEDE5930</key>
-		<string>https://github.com/Fuggle/caffeine-fix</string>
+		<key>429B5899-9EB3-497B-AC08-A65196C81775</key>
+		<string>ssh://github.com/Fuggle/caffeine-fix.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>CaffeineFix.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>4D9A2C80-0F0F-475E-828C-A8B2DEDE5930</key>
+		<key>429B5899-9EB3-497B-AC08-A65196C81775</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Fuggle/caffeine-fix</string>
+	<string>ssh://github.com/Fuggle/caffeine-fix.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>4D9A2C80-0F0F-475E-828C-A8B2DEDE5930</string>
+	<string>429B5899-9EB3-497B-AC08-A65196C81775</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>4D9A2C80-0F0F-475E-828C-A8B2DEDE5930</string>
+			<string>429B5899-9EB3-497B-AC08-A65196C81775</string>
 			<key>IDESourceControlWCCName</key>
 			<string>caffeine-fix</string>
 		</dict>

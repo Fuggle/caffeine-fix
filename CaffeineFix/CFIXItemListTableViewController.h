@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface CFIXItemListTableViewController : UITableViewController
+@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
+@property (nonatomic,strong) NSArray* drinkList;
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue;
 
