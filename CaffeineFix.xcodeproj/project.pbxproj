@@ -33,7 +33,8 @@
 		434D4B3F190CF4E3002995AC /* LCLegendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D4B3C190CF4E3002995AC /* LCLegendView.m */; };
 		434D4B40190CF4E3002995AC /* LCLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D4B3E190CF4E3002995AC /* LCLineChartView.m */; };
 		434D4B43190CF4EE002995AC /* LCInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D4B42190CF4EE002995AC /* LCInfoView.m */; };
-		434D4B4F190D09E3002995AC /* CFIXStatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D4B4E190D09E3002995AC /* CFIXStatViewController.m */; };
+		439139BD192D61BD002158D5 /* CFIXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 439139BB192D61BD002158D5 /* CFIXViewController.m */; };
+		439139BE192D61BD002158D5 /* CFIXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 439139BC192D61BD002158D5 /* CFIXViewController.xib */; };
 		4399CB5E1903E86F00D6346F /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4399CB5D1903E83900D6346F /* libCorePlot-CocoaTouch.a */; };
 		4399CBAF1903F1D700D6346F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4399CBAE1903F1D700D6346F /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -165,8 +166,9 @@
 		434D4B3E190CF4E3002995AC /* LCLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCLineChartView.m; sourceTree = "<group>"; };
 		434D4B41190CF4EE002995AC /* LCInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCInfoView.h; sourceTree = "<group>"; };
 		434D4B42190CF4EE002995AC /* LCInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCInfoView.m; sourceTree = "<group>"; };
-		434D4B4D190D09E3002995AC /* CFIXStatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIXStatViewController.h; sourceTree = "<group>"; };
-		434D4B4E190D09E3002995AC /* CFIXStatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIXStatViewController.m; sourceTree = "<group>"; };
+		439139BA192D61BD002158D5 /* CFIXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIXViewController.h; sourceTree = "<group>"; };
+		439139BB192D61BD002158D5 /* CFIXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIXViewController.m; sourceTree = "<group>"; };
+		439139BC192D61BD002158D5 /* CFIXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CFIXViewController.xib; sourceTree = "<group>"; };
 		4399CB0F1903E83900D6346F /* CorePlot-CocoaTouch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CorePlot-CocoaTouch.h"; sourceTree = "<group>"; };
 		4399CB101903E83900D6346F /* CPTAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPTAnimation.h; sourceTree = "<group>"; };
 		4399CB111903E83900D6346F /* CPTAnimationOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPTAnimationOperation.h; sourceTree = "<group>"; };
@@ -327,8 +329,9 @@
 				2490343A190360EE0092D207 /* CFIXNewItem.h */,
 				2490343B190360EE0092D207 /* CFIXNewItem.m */,
 				24BC48F81903677F0052EFA8 /* Storyboard_iPhone.storyboard */,
-				434D4B4D190D09E3002995AC /* CFIXStatViewController.h */,
-				434D4B4E190D09E3002995AC /* CFIXStatViewController.m */,
+				439139BA192D61BD002158D5 /* CFIXViewController.h */,
+				439139BB192D61BD002158D5 /* CFIXViewController.m */,
+				439139BC192D61BD002158D5 /* CFIXViewController.xib */,
 				434D4B41190CF4EE002995AC /* LCInfoView.h */,
 				434D4B42190CF4EE002995AC /* LCInfoView.m */,
 				434D4B3B190CF4E3002995AC /* LCLegendView.h */,
@@ -624,6 +627,7 @@
 			files = (
 				24BC490219036B010052EFA8 /* CFIXItemListTableViewController.xib in Resources */,
 				24BC48FD19036A420052EFA8 /* CFIXAddNewItemViewController.xib in Resources */,
+				439139BE192D61BD002158D5 /* CFIXViewController.xib in Resources */,
 				24CC730318FBA31D00799FCB /* InfoPlist.strings in Resources */,
 				24BC48F61903677F0052EFA8 /* Storyboard_iPhone.storyboard in Resources */,
 				24CC730B18FBA31D00799FCB /* Images.xcassets in Resources */,
@@ -647,10 +651,10 @@
 			files = (
 				24BC48FC19036A420052EFA8 /* CFIXAddNewItemViewController.m in Sources */,
 				434D4B43190CF4EE002995AC /* LCInfoView.m in Sources */,
-				434D4B4F190D09E3002995AC /* CFIXStatViewController.m in Sources */,
 				24CC730918FBA31D00799FCB /* CFIXAppDelegate.m in Sources */,
 				434D4B3F190CF4E3002995AC /* LCLegendView.m in Sources */,
 				24CC730518FBA31D00799FCB /* main.m in Sources */,
+				439139BD192D61BD002158D5 /* CFIXViewController.m in Sources */,
 				249E97A8190BA70C0027D779 /* CFIXDataModel.xcdatamodeld in Sources */,
 				434D4B39190CF498002995AC /* UIKit+DrawingHelpers.m in Sources */,
 				24BC490119036B010052EFA8 /* CFIXItemListTableViewController.m in Sources */,

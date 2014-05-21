@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ydb-mB-W3W">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ydb-mB-W3W">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -7,23 +7,10 @@
         <!--View Controller - My dashboard-->
         <scene sceneID="hzd-YK-otD">
             <objects>
-                <viewController id="BoA-4g-Zuo" sceneMemberID="viewController">
+                <viewController id="BoA-4g-Zuo" customClass="CFIXViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1kp-ZB-u3v">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H0B-zS-Rai">
-                                <rect key="frame" x="41" y="374" width="81" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Statistics">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="bA5-en-LMf" kind="push" id="UVl-2q-8Hc"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="My dashboard" id="iw2-el-Ytl">
@@ -38,37 +25,6 @@
             </objects>
             <point key="canvasLocation" x="885" y="4"/>
         </scene>
-        <!--Stat View Controller - chart-->
-        <scene sceneID="45l-OM-NLk">
-            <objects>
-                <viewController title="chart" id="bA5-en-LMf" customClass="CFIXStatViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Isz-he-gqb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" id="nCz-Y6-rIa">
-                                <rect key="frame" x="10" y="8" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Statistics" id="ibz-4c-ztj">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="done" id="LhD-B2-OcO">
-                                            <connections>
-                                                <segue destination="BoA-4g-Zuo" kind="push" id="Dd5-ss-IF1"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ie4-Sl-oF3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="885" y="797"/>
-        </scene>
         <!--Item List Table View Controller - Select item-->
         <scene sceneID="FRK-NK-Ew2">
             <objects>
@@ -79,7 +35,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListPrototypeCell" id="vbK-34-Lbo">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vbK-34-Lbo" id="Gw4-97-TDZ">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -190,7 +146,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="Dd5-ss-IF1"/>
-    </inferredMetricsTieBreakers>
 </document>
