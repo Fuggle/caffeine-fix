@@ -8,6 +8,8 @@
 
 #import "CFIXAddNewItemViewController.h"
 #import "CorePlot-CocoaTouch.h"
+#import "CFIXAppDelegate.h"
+#import "DrinkList.h"
 
 @interface CFIXAddNewItemViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -16,6 +18,19 @@
 @end
 
 @implementation CFIXAddNewItemViewController
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize drinkList;
+
+-(NSManagedObjectContext *)managedObjectContext {
+    
+    if (!_managedObjectContext) {
+        
+        CFIXAppDelegate *myAppDelegate = [[CFIXAppDelegate alloc]init];
+        _managedObjectContext = myAppDelegate.managedObjectContext;
+    }
+    
+    return _managedObjectContext;
+}
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

@@ -27,6 +27,23 @@
     CFIXAddNewItemViewController *source = [segue sourceViewController];
     CFIXNewItem *item = source.item;
     if (item != nil) {
+        DrinkList *drinks = [NSEntityDescription
+                             insertNewObjectForEntityForName:@"DrinkList"
+                             inManagedObjectContext:self.managedObjectContext];
+        drinks.drinkName = item.itemName;
+        
+        NSError *error;
+        if (![self.managedObjectContext save:&error]) {
+            NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+        }
+        
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"DrinkList"
+                                                  inManagedObjectContext:self.managedObjectContext];
+        [fetchRequest setEntity:entity];
+        
+        self.drinkList = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+        
         //[self.drinks addObject:item];
         [self.tableView reloadData];
     }
@@ -51,7 +68,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.drinkList = [[NSMutableArray alloc] init];
+    //self.drinkList = [[NSMutableArray alloc] init];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -65,20 +82,9 @@
     [fetchRequest setEntity:entity];
     NSError *error;
     self.drinkList = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    self.title = @"Drinks List";
+    self.title = @"Drink List";
     
-    /*
-    CFIXNewItem *item1 = [[CFIXNewItem alloc] init];
-    item1.itemName = @"1 Shot";
-    [self.caffeineItems addObject:item1];
     
-    CFIXNewItem *item2 = [[CFIXNewItem alloc] init];
-    item2.itemName = @"2 shot";
-    [self.caffeineItems addObject:item2];
-    
-    CFIXNewItem *item3 = [[CFIXNewItem alloc] init];
-    item3.itemName = @"Earl Grey";
-    [self.caffeineItems addObject:item3];*/
 }
 
 - (void)didReceiveMemoryWarning
@@ -98,34 +104,32 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    //NSLog(@" data tableView %@", self.caffeineItems.count);
     return [self.drinkList count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@" drew cells: %@", self.drinkList);
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListPrototypeCell" forIndexPath:indexPath];
     
     // Set up the cell...
-    DrinkList *info = [drinkList objectAtIndex:indexPath.row];
+    DrinkList *info = [self.drinkList objectAtIndex:indexPath.row];
     cell.textLabel.text = info.drinkName;
     
-    return cell;
-    /*UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListPrototypeCell" forIndexPath:indexPath];
-    
-    CFIXNewItem *items = [self.caffeineItems objectAtIndex:indexPath.row];
+    //old code...
+    /*CFIXNewItem *items = [self.caffeineItems objectAtIndex:indexPath.row];
     cell.textLabel.text = items.itemName;
     
     if (items.completed) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;
-    }
+    }*/
     
-    return cell;*/
+    return cell;
 }
 
 /*

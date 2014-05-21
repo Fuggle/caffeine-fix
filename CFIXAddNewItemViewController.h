@@ -11,6 +11,8 @@
 
 @interface CFIXAddNewItemViewController : UIViewController
 
+@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
+@property (nonatomic,strong) NSArray* drinkList;
 @property CFIXNewItem *item;
 
 @end
