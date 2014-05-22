@@ -57,9 +57,9 @@
 		249E97A4190BA56C0027D779 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		249E97A7190BA70C0027D779 /* CFIXDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CFIXDataModel.xcdatamodel; sourceTree = "<group>"; };
 		24BC48F71903677F0052EFA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
-		24BC48F919036A420052EFA8 /* CFIXAddNewItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIXAddNewItemViewController.h; sourceTree = "<group>"; };
-		24BC48FA19036A420052EFA8 /* CFIXAddNewItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIXAddNewItemViewController.m; sourceTree = "<group>"; };
-		24BC48FB19036A420052EFA8 /* CFIXAddNewItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CFIXAddNewItemViewController.xib; sourceTree = "<group>"; };
+		24BC48F919036A420052EFA8 /* CFIXAddNewItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFIXAddNewItemViewController.h; path = ../CFIXAddNewItemViewController.h; sourceTree = "<group>"; };
+		24BC48FA19036A420052EFA8 /* CFIXAddNewItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFIXAddNewItemViewController.m; path = ../CFIXAddNewItemViewController.m; sourceTree = "<group>"; };
+		24BC48FB19036A420052EFA8 /* CFIXAddNewItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CFIXAddNewItemViewController.xib; path = ../CFIXAddNewItemViewController.xib; sourceTree = "<group>"; };
 		24BC48FE19036B010052EFA8 /* CFIXItemListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIXItemListTableViewController.h; sourceTree = "<group>"; };
 		24BC48FF19036B010052EFA8 /* CFIXItemListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIXItemListTableViewController.m; sourceTree = "<group>"; };
 		24BC490019036B010052EFA8 /* CFIXItemListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CFIXItemListTableViewController.xib; sourceTree = "<group>"; };
@@ -282,9 +282,6 @@
 		24CC72EC18FBA31D00799FCB = {
 			isa = PBXGroup;
 			children = (
-				24BC48F919036A420052EFA8 /* CFIXAddNewItemViewController.h */,
-				24BC48FA19036A420052EFA8 /* CFIXAddNewItemViewController.m */,
-				24BC48FB19036A420052EFA8 /* CFIXAddNewItemViewController.xib */,
 				24CC72FE18FBA31D00799FCB /* CaffeineFix */,
 				24CC731718FBA31D00799FCB /* CaffeineFixTests */,
 				24CC72F718FBA31D00799FCB /* Frameworks */,
@@ -321,6 +318,9 @@
 		24CC72FE18FBA31D00799FCB /* CaffeineFix */ = {
 			isa = PBXGroup;
 			children = (
+				24BC48F919036A420052EFA8 /* CFIXAddNewItemViewController.h */,
+				24BC48FA19036A420052EFA8 /* CFIXAddNewItemViewController.m */,
+				24BC48FB19036A420052EFA8 /* CFIXAddNewItemViewController.xib */,
 				24CC730718FBA31D00799FCB /* CFIXAppDelegate.h */,
 				24CC730818FBA31D00799FCB /* CFIXAppDelegate.m */,
 				24BC48FE19036B010052EFA8 /* CFIXItemListTableViewController.h */,
