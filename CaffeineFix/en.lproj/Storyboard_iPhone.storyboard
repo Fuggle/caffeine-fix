@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ydb-mB-W3W">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ydb-mB-W3W">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -14,6 +14,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="My dashboard" id="iw2-el-Ytl">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="8HU-WR-AHL">
+                            <connections>
+                                <segue destination="Y3y-Jc-hxU" kind="modal" id="mJK-CF-wCd"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="XUd-7f-kwO">
                             <connections>
                                 <segue destination="5In-mN-wg0" kind="push" id="7l5-Hq-g5L"/>
@@ -24,6 +29,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a72-Yi-xG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="885" y="4"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zOZ-Lh-oDK">
+            <objects>
+                <viewController id="Y3y-Jc-hxU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XbD-Tu-f4M">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="zkm-PZ-1jV">
+                                <rect key="frame" x="0.0" y="18" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Graphs and Charts" id="OB3-cS-PzJ">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="LuL-NT-uPl">
+                                            <connections>
+                                                <segue destination="ydb-mB-W3W" kind="modal" id="aFe-Mo-6NB"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="s56-aD-OPe">
+                                <rect key="frame" x="20" y="100" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pie Chart">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5ZL-q9-XTJ" kind="modal" id="mG6-Ig-aG3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFg-im-LC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885" y="773"/>
+        </scene>
+        <!--Pie Chart View Controller-->
+        <scene sceneID="mV4-R7-utY">
+            <objects>
+                <viewController id="5ZL-q9-XTJ" customClass="PieChartViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZLh-JZ-yUP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="db6-Qe-pBW">
+                                <rect key="frame" x="0.0" y="13" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Pie Chart" id="U6E-KW-6mF">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="hIv-zk-UmZ">
+                                            <connections>
+                                                <segue destination="Y3y-Jc-hxU" kind="modal" id="tlc-nJ-pgB"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" id="VQr-BQ-1Mp" customClass="DLPieChart">
+                                <rect key="frame" x="0.0" y="57" width="320" height="511"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="pieChartView" destination="VQr-BQ-1Mp" id="u38-81-z7k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yzv-Rm-bS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885" y="1489"/>
         </scene>
         <!--Item List Table View Controller - Select item-->
         <scene sceneID="FRK-NK-Ew2">
@@ -145,4 +226,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="tlc-nJ-pgB"/>
+    </inferredMetricsTieBreakers>
 </document>
