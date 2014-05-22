@@ -11,6 +11,7 @@
 @interface CFIXNewItem : NSObject
 
 @property NSString *itemName;
+@property NSString *itemType;
 @property BOOL completed;
 @property (readonly) NSDate *creationDate;
 

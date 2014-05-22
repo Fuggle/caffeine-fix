@@ -14,12 +14,15 @@
 @interface CFIXAddNewItemViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *drinkType;
+
 
 @end
 
 @implementation CFIXAddNewItemViewController
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize drinkList;
+
 
 -(NSManagedObjectContext *)managedObjectContext {
     
@@ -34,6 +37,7 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSLog(@"Type selected: %@", self.drinkType);
     if (sender != self.doneButton) return;
     if (self.textField.text.length > 0) {
         self.item = [[CFIXNewItem alloc] init];
