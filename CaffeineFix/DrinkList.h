@@ -13,5 +13,7 @@
 @interface DrinkList : NSManagedObject
 
 @property (nonatomic, retain) NSString * drinkName;
+@property (nonatomic, retain) NSString * drinkType;
+@property (nonatomic, retain) NSNumber * caffMg;
 
 @end

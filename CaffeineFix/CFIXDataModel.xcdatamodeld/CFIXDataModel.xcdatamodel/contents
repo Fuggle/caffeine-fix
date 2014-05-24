@@ -24,7 +24,9 @@
         <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Log" syncable="YES">
+        <attribute name="caffMg" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="drink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="drinkType" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <entity name="PieGraph" syncable="YES">
@@ -33,11 +35,11 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DrinkList" positionX="-2916" positionY="-1080" width="128" height="88"/>
-        <element name="Log" positionX="-3080" positionY="-1080" width="128" height="73"/>
-        <element name="Dashboard" positionX="-3251" positionY="-1080" width="128" height="73"/>
-        <element name="PieGraph" positionX="-3249" positionY="-952" width="128" height="88"/>
         <element name="BarLimit" positionX="-3393" positionY="-954" width="128" height="120"/>
+        <element name="Dashboard" positionX="-3251" positionY="-1080" width="128" height="73"/>
+        <element name="DrinkList" positionX="-2916" positionY="-1080" width="128" height="88"/>
         <element name="LineGraph" positionX="-3537" positionY="-954" width="128" height="120"/>
+        <element name="Log" positionX="-3080" positionY="-1080" width="128" height="103"/>
+        <element name="PieGraph" positionX="-3249" positionY="-952" width="128" height="88"/>
     </elements>
 </model>

@@ -12,6 +12,7 @@
 
 @property NSString *itemName;
 @property NSString *itemType;
+@property NSNumber *itemCaff;
 @property BOOL completed;
 @property (readonly) NSDate *creationDate;
 

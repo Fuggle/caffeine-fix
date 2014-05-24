@@ -37,13 +37,24 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"Type selected: %@", self.drinkType);
     if (sender != self.doneButton) return;
+    self.item = [[CFIXNewItem alloc] init];
     if (self.textField.text.length > 0) {
-        self.item = [[CFIXNewItem alloc] init];
         self.item.itemName = self.textField.text;
         self.item.completed = NO;
     }
+    NSString *type = [self.drinkType titleForSegmentAtIndex:self.drinkType.selectedSegmentIndex];;
+    if (type.length > 0) {
+        self.item.itemType = type;
+    }
+    NSNumber *newNum = [NSNumber numberWithInt:160];
+    if (newNum != NULL) {
+        self.item.itemCaff = newNum;
+    }
+    
+    NSLog(@"item.itemName: %@", self.item.itemName);
+    NSLog(@"item.itemType: %@", self.item.itemType);
+    NSLog(@"item.itemName: %@", self.item.itemCaff);
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

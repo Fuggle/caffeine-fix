@@ -58,7 +58,9 @@
     [fetchRequest setEntity:entity];
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
     for (DrinkList *info in fetchedObjects) {
-        //NSLog(@"Drink: %@", info.drinkName);
+        NSLog(@"Drinkname: %@", info.drinkName);
+        NSLog(@"DrinkType: %@", info.drinkType);
+        NSLog(@"Drink CaffMg: %@", info.caffMg);
     }
     
     return YES;

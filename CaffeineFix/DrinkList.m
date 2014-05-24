@@ -12,5 +12,7 @@
 @implementation DrinkList
 
 @dynamic drinkName;
+@dynamic drinkType;
+@dynamic caffMg;
 
 @end

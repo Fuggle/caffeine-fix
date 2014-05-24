@@ -28,6 +28,8 @@
 		24CC731418FBA31D00799FCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CC72FC18FBA31D00799FCB /* UIKit.framework */; };
 		24CC731C18FBA31D00799FCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24CC731A18FBA31D00799FCB /* InfoPlist.strings */; };
 		24CC731E18FBA31D00799FCB /* CaffeineFixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CC731D18FBA31D00799FCB /* CaffeineFixTests.m */; };
+		24E890A91930825E00B8111F /* CFIXTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E890A71930825E00B8111F /* CFIXTableViewCell.m */; };
+		24E890AA1930825E00B8111F /* CFIXTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E890A81930825E00B8111F /* CFIXTableViewCell.xib */; };
 		24F1360D19077052005928CD /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F1360C19077052005928CD /* libCorePlot-CocoaTouch.a */; };
 		434D4B39190CF498002995AC /* UIKit+DrawingHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D4B38190CF498002995AC /* UIKit+DrawingHelpers.m */; };
 		434D4B3F190CF4E3002995AC /* LCLegendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 434D4B3C190CF4E3002995AC /* LCLegendView.m */; };
@@ -81,6 +83,9 @@
 		24CC731918FBA31D00799FCB /* CaffeineFixTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CaffeineFixTests-Info.plist"; sourceTree = "<group>"; };
 		24CC731B18FBA31D00799FCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24CC731D18FBA31D00799FCB /* CaffeineFixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaffeineFixTests.m; sourceTree = "<group>"; };
+		24E890A61930825E00B8111F /* CFIXTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIXTableViewCell.h; sourceTree = "<group>"; };
+		24E890A71930825E00B8111F /* CFIXTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIXTableViewCell.m; sourceTree = "<group>"; };
+		24E890A81930825E00B8111F /* CFIXTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CFIXTableViewCell.xib; sourceTree = "<group>"; };
 		24F135BE19077052005928CD /* CorePlot-CocoaTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CorePlot-CocoaTouch.h"; sourceTree = "<group>"; };
 		24F135BF19077052005928CD /* CPTAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAnimation.h; sourceTree = "<group>"; };
 		24F135C019077052005928CD /* CPTAnimationOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAnimationOperation.h; sourceTree = "<group>"; };
@@ -335,6 +340,9 @@
 				2490343A190360EE0092D207 /* CFIXNewItem.h */,
 				2490343B190360EE0092D207 /* CFIXNewItem.m */,
 				24BC48F81903677F0052EFA8 /* Storyboard_iPhone.storyboard */,
+				24E890A61930825E00B8111F /* CFIXTableViewCell.h */,
+				24E890A71930825E00B8111F /* CFIXTableViewCell.m */,
+				24E890A81930825E00B8111F /* CFIXTableViewCell.xib */,
 				80BB1660192E124E009A36BF /* DLPieChart.h */,
 				80BB1661192E124E009A36BF /* DLPieChart.m */,
 				80BB1663192E1325009A36BF /* CFIXPieChartViewController.h */,
@@ -635,6 +643,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E890AA1930825E00B8111F /* CFIXTableViewCell.xib in Resources */,
 				24BC490219036B010052EFA8 /* CFIXItemListTableViewController.xib in Resources */,
 				24BC48FD19036A420052EFA8 /* CFIXAddNewItemViewController.xib in Resources */,
 				439139BE192D61BD002158D5 /* CFIXViewController.xib in Resources */,
@@ -663,6 +672,7 @@
 				24BC48FC19036A420052EFA8 /* CFIXAddNewItemViewController.m in Sources */,
 				434D4B43190CF4EE002995AC /* LCInfoView.m in Sources */,
 				24CC730918FBA31D00799FCB /* CFIXAppDelegate.m in Sources */,
+				24E890A91930825E00B8111F /* CFIXTableViewCell.m in Sources */,
 				434D4B3F190CF4E3002995AC /* LCLegendView.m in Sources */,
 				24CC730518FBA31D00799FCB /* main.m in Sources */,
 				439139BD192D61BD002158D5 /* CFIXViewController.m in Sources */,

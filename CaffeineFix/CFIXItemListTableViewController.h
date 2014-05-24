@@ -11,6 +11,7 @@
 @interface CFIXItemListTableViewController : UITableViewController
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 @property (nonatomic,strong) NSArray* drinkList;
+@property (weak, nonatomic) IBOutlet UITableViewCell *selectedDrink;
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue;
 
