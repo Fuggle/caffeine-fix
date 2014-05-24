@@ -8,6 +8,7 @@
 
 #import "CFIXAppDelegate.h"
 #import "DrinkList.h"
+#import "Log.h"
 
 @implementation CFIXAppDelegate
 
@@ -53,14 +54,15 @@
     
     // Test listing all FailedBankInfos from the store
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"DrinkList"
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Log"
                                               inManagedObjectContext:context];
     [fetchRequest setEntity:entity];
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-    for (DrinkList *info in fetchedObjects) {
-        NSLog(@"Drinkname: %@", info.drinkName);
+    for (Log *info in fetchedObjects) {
+        NSLog(@"Drinkname: %@", info.drink);
         NSLog(@"DrinkType: %@", info.drinkType);
         NSLog(@"Drink CaffMg: %@", info.caffMg);
+        NSLog(@"Logged at: %@", info.time);
     }
     
     return YES;

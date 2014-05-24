@@ -10,4 +10,6 @@
 
 @interface CFIXViewController : UIViewController
 
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue;
+
 @end

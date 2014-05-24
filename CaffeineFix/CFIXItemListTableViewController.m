@@ -11,6 +11,7 @@
 #import "CFIXNewItem.h"
 #import "CFIXAddNewItemViewController.h"
 #import "DrinkList.h"
+#import "Log.h"
 
 @interface CFIXItemListTableViewController ()
 
@@ -21,6 +22,7 @@
 @implementation CFIXItemListTableViewController
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize drinkList;
+@synthesize drinkLog;
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue
 {
@@ -189,11 +191,36 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //[tableView deselectRowAtIndexPath:indexPath animated:NO];
-    //CFIXNewItem *tappedItem = [self.caffeineItems objectAtIndex:indexPath.row];
-    //tappedItem.completed = !tappedItem.completed;
-    //tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-    NSLog(@" index: %@", indexPath);
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    CFIXNewItem *tappedItem = [self.caffeineItems objectAtIndex:indexPath.row];
+    tappedItem.completed = !tappedItem.completed;
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    
+    //add to log
+    Log *drinkLog = [NSEntityDescription
+                         insertNewObjectForEntityForName:@"Log"
+                         inManagedObjectContext:self.managedObjectContext];
+    drinkLog.drink = cell.textLabel.text;
+    drinkLog.drinkType = @"Coffee";
+    drinkLog.caffMg = [NSNumber numberWithInt:190];
+    drinkLog.time = [[NSDate alloc] init];
+    
+    NSError *error;
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    
+
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"LoggedDrink"])
+    {
+        NSLog(@" segue id: %@", segue.identifier);
+    }
 }
 
 @end
