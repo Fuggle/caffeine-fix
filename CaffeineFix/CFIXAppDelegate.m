@@ -20,39 +20,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    /*NSManagedObjectContext *context = [self managedObjectContext];
-    DrinkList *DrinkList = [NSEntityDescription
-                                       insertNewObjectForEntityForName:@"DrinkList"
-                                       inManagedObjectContext:context];
-    [DrinkList setValue:@"Test DRINK" forKey:@"drinkName"];
-    NSError *error;
-    if (![context save:&error]) {
-        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-    }
-    
-    //fetch the data.
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:@"DrinkList" inManagedObjectContext:context];
-    [fetchRequest setEntity:entity];
-    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-    for (NSManagedObject *info in fetchedObjects) {
-        NSLog(@"Drink: %@", [info valueForKey:@"drinkName"]);
-    }*/
-    
     
     NSManagedObjectContext *context = [self managedObjectContext];
-    /*DrinkList *drinks = [NSEntityDescription
-                                      insertNewObjectForEntityForName:@"DrinkList"
-                                      inManagedObjectContext:context];
-    drinks.drinkName = @"new drink";*/
      
     NSError *error;
-    /*if (![context save:&error]) {
-        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-    }*/
     
-    // Test listing all FailedBankInfos from the store
+    //---------------------------------------
+    //BELOW IS HOW TO READ DATA FROM COREDATA
+    //---------------------------------------
+    //String in 'entityForName:@"Name"'  here name should be the EXACT name of the CoreData Entity.
+    //Example of reading each value from entity into printout.
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Log"
                                               inManagedObjectContext:context];
