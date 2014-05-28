@@ -40,6 +40,7 @@
 		439139BE192D61BD002158D5 /* CFIXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 439139BC192D61BD002158D5 /* CFIXViewController.xib */; };
 		4399CB5E1903E86F00D6346F /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4399CB5D1903E83900D6346F /* libCorePlot-CocoaTouch.a */; };
 		4399CBAF1903F1D700D6346F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4399CBAE1903F1D700D6346F /* QuartzCore.framework */; };
+		439E8D181935691500D01408 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439E8D171935691500D01408 /* Storyboard_iPad.storyboard */; };
 		80BB1662192E124E009A36BF /* DLPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 80BB1661192E124E009A36BF /* DLPieChart.m */; };
 		80BB1665192E1325009A36BF /* CFIXPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80BB1664192E1325009A36BF /* CFIXPieChartViewController.m */; };
 /* End PBXBuildFile section */
@@ -259,6 +260,7 @@
 		4399CB5C1903E83900D6346F /* NSNumberExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		4399CB5D1903E83900D6346F /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "../../Downloads/CorePlot_1.4/Binaries/iOS/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		4399CBAE1903F1D700D6346F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		439E8D171935691500D01408 /* Storyboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPad.storyboard; sourceTree = "<group>"; };
 		80BB1660192E124E009A36BF /* DLPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLPieChart.h; sourceTree = "<group>"; };
 		80BB1661192E124E009A36BF /* DLPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLPieChart.m; sourceTree = "<group>"; };
 		80BB1663192E1325009A36BF /* CFIXPieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIXPieChartViewController.h; sourceTree = "<group>"; };
@@ -338,11 +340,12 @@
 				24CC730718FBA31D00799FCB /* CFIXAppDelegate.h */,
 				24CC730818FBA31D00799FCB /* CFIXAppDelegate.m */,
 				24BC48FE19036B010052EFA8 /* CFIXItemListTableViewController.h */,
+				24BC48F81903677F0052EFA8 /* Storyboard_iPhone.storyboard */,
 				24BC48FF19036B010052EFA8 /* CFIXItemListTableViewController.m */,
 				24BC490019036B010052EFA8 /* CFIXItemListTableViewController.xib */,
 				2490343A190360EE0092D207 /* CFIXNewItem.h */,
 				2490343B190360EE0092D207 /* CFIXNewItem.m */,
-				24BC48F81903677F0052EFA8 /* Storyboard_iPhone.storyboard */,
+				439E8D171935691500D01408 /* Storyboard_iPad.storyboard */,
 				24E890A61930825E00B8111F /* CFIXTableViewCell.h */,
 				24E890A71930825E00B8111F /* CFIXTableViewCell.m */,
 				24E890A81930825E00B8111F /* CFIXTableViewCell.xib */,
@@ -655,6 +658,7 @@
 				24CC730318FBA31D00799FCB /* InfoPlist.strings in Resources */,
 				24BC48F61903677F0052EFA8 /* Storyboard_iPhone.storyboard in Resources */,
 				24CC730B18FBA31D00799FCB /* Images.xcassets in Resources */,
+				439E8D181935691500D01408 /* Storyboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

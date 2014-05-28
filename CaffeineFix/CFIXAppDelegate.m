@@ -20,6 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+     [self initializeStoryBoardBasedOnScreenSize];
     
     NSManagedObjectContext *context = [self managedObjectContext];
      
@@ -43,6 +44,45 @@
     }
     
     return YES;
+}
+
+
+// This code seperate the storyboard on different devices
+-(void)initializeStoryBoardBasedOnScreenSize {
+    UIStoryboard *storyboard = nil;
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
+    {    // The iOS device = iPhone or iPod Touch
+        CGSize iOSDeviceScreenSize = [[UIScreen mainScreen] bounds].size;
+        if (iOSDeviceScreenSize.height == 480)
+        {   // iPhone 3GS, 4, and 4S and iPod Touch 3rd and 4th generation: 3.5 inch screen (diagonally measured)
+            NSLog(@"Loading iphone 4 storyboard");
+            // Instantiate a new storyboard object using the storyboard file named MainStoryboard_iPhone
+            storyboard = [UIStoryboard storyboardWithName:@"Storyboard_iPhone" bundle:nil];
+        }
+        if (iOSDeviceScreenSize.height == 568)
+        {   // iPhone 5 and iPod Touch 5th generation: 4 inch screen (diagonally measured)
+            NSLog(@"Loading iphone 5 storyboard");
+            // Instantiate a new storyboard object using the storyboard file named Storyboard_iPhone
+            storyboard = [UIStoryboard storyboardWithName:@"Storyboard_iPhone" bundle:nil];
+        }
+        
+    } else if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad){
+        // The iOS device = iPad
+        NSLog(@"Loading ipad storyboard");
+        // Instantiate a new storyboard object using the storyboard file named Storyboard_iPad
+        storyboard = [UIStoryboard storyboardWithName:@"Storyboard_iPad" bundle:nil];
+    }
+    // Instantiate the initial view controller object from the storyboard
+    UIViewController *initialViewController = [storyboard instantiateInitialViewController];
+    
+    // Instantiate a UIWindow object and initialize it with the screen size of the iOS device
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    // Set the initial view controller to be the root view controller of the window object
+    self.window.rootViewController  = initialViewController;
+    
+    // Set the window object to be the key window and show it
+    [self.window makeKeyAndVisible];
 }
 
 
