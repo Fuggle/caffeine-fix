@@ -10,6 +10,10 @@
 
 #import "LCLineChartView.h"
 
+#import "CFIXAppDelegate.h"
+#import "DrinkList.h"
+#import "Log.h"
+
 @interface CFIXViewController ()
 
 @property (strong) NSDateFormatter *formatter;
@@ -129,8 +133,16 @@
         d.xMax = 31;
         d.title = @"Caffeine Intake";
         d.color = [UIColor redColor];
-        d.itemCount = 10;
+        d.itemCount = 8;
         
+        NSArray *fetchedObjects;
+        for (Log *info in fetchedObjects) {
+            NSLog(@"Drinkname: %@", info.drink);
+            NSLog(@"DrinkType: %@", info.drinkType);
+            NSLog(@"Drink CaffMg: %@", info.caffMg);
+            NSLog(@"Logged at: %@", info.time);
+        }
+
         NSMutableArray *vals = [NSMutableArray new];
         for(NSUInteger i = 0; i < d.itemCount; ++i)
             [vals addObject:@((rand() / (float)RAND_MAX) * (31 - 1) + 1)];
