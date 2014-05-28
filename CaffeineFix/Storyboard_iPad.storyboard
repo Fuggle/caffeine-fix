@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="geP-bO-yIo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="geP-bO-yIo">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -28,13 +28,45 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My dashboard" id="Lpz-hA-eaX">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="hCc-pq-7uP"/>
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="hCc-pq-7uP">
+                            <connections>
+                                <segue destination="QVU-OW-wwO" kind="modal" id="rs3-Ai-s6P"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="SZn-Il-YXC"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="isp-lz-XKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="361" y="-285"/>
+        </scene>
+        <!--Pie Chart View Controller-->
+        <scene sceneID="5SF-fc-2BD">
+            <objects>
+                <viewController id="QVU-OW-wwO" customClass="PieChartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LDM-MY-UxD"/>
+                        <viewControllerLayoutGuide type="bottom" id="sg9-TH-non"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vD7-UH-IDb">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jt8-Gv-ylH" customClass="DLPieChart">
+                                <rect key="frame" x="0.0" y="92" width="768" height="840"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="pieChartView" destination="jt8-Gv-ylH" id="Eug-ou-OA8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mde-Jf-CCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="361" y="880"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hNa-SX-eyg">
