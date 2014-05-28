@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface CFIXViewController : UIViewController
+@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
+@property (nonatomic, strong)NSArray * drinklog;
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue;
 

@@ -14,6 +14,7 @@
 #import "DrinkList.h"
 #import "Log.h"
 
+
 @interface CFIXViewController ()
 
 @property (strong) NSDateFormatter *formatter;
@@ -21,7 +22,8 @@
 @end
 
 @implementation CFIXViewController
-
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize drinklog;
 #define SECS_PER_DAY (86400)
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -135,13 +137,29 @@
         d.color = [UIColor redColor];
         d.itemCount = 8;
         
-        NSArray *fetchedObjects;
+        NSManagedObjectContext *context = [self managedObjectContext];
+        
+        NSError *error;
+        
+        //---------------------------------------
+        //BELOW IS HOW TO READ DATA FROM COREDATA
+        //---------------------------------------
+        //String in 'entityForName:@"Name"'  here name should be the EXACT name of the CoreData Entity.
+        //Example of reading each value from entity into printout.
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Log"
+                                                  inManagedObjectContext:context];
+        [fetchRequest setEntity:entity];
+        self.drinklog = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+        NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
         for (Log *info in fetchedObjects) {
             NSLog(@"Drinkname: %@", info.drink);
             NSLog(@"DrinkType: %@", info.drinkType);
             NSLog(@"Drink CaffMg: %@", info.caffMg);
             NSLog(@"Logged at: %@", info.time);
         }
+
+        
 
         NSMutableArray *vals = [NSMutableArray new];
         for(NSUInteger i = 0; i < d.itemCount; ++i)
@@ -177,5 +195,17 @@
     
     
 }
+
+-(NSManagedObjectContext *)managedObjectContext {
+    
+    if (!_managedObjectContext) {
+        
+        CFIXAppDelegate *myAppDelegate = [[CFIXAppDelegate alloc]init];
+        _managedObjectContext = myAppDelegate.managedObjectContext;
+    }
+    
+    return _managedObjectContext;
+}
+
 
 @end
