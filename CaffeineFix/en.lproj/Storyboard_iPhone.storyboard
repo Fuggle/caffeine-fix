@@ -28,7 +28,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a72-Yi-xG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885" y="4"/>
+            <point key="canvasLocation" x="873" y="4"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zOZ-Lh-oDK">
@@ -67,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFg-im-LC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885" y="773"/>
+            <point key="canvasLocation" x="831" y="781"/>
         </scene>
         <!--Pie Chart View Controller-->
         <scene sceneID="mV4-R7-utY">
