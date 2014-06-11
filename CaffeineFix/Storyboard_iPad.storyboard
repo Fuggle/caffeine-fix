@@ -21,7 +21,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="2TD-5J-ubT"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="p0v-5l-nCH">
                             <connections>
-                                <segue destination="QVU-OW-wwO" kind="push" id="cs8-m6-6hx"/>
+                                <segue destination="2IV-7V-x8C" kind="push" id="aAn-d2-9HJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -48,7 +48,6 @@
         <!--Pie Chart View Controller-->
         <scene sceneID="5SF-fc-2BD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mde-Jf-CCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="QVU-OW-wwO" customClass="PieChartViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LDM-MY-UxD"/>
@@ -71,8 +70,116 @@
                         <outlet property="pieChartView" destination="jt8-Gv-ylH" id="Eug-ou-OA8"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mde-Jf-CCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2187" y="-873"/>
+            <point key="canvasLocation" x="1999" y="439"/>
+        </scene>
+        <!--Item List Table View Controller - Select item-->
+        <scene sceneID="8fh-af-Hkw">
+            <objects>
+                <tableViewController id="2IV-7V-x8C" customClass="CFIXItemListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eyz-Hp-Uup">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListPrototypeCell" id="0RF-jj-eDQ">
+                                <rect key="frame" x="0.0" y="86" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0RF-jj-eDQ" id="DWS-wH-sdJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmL-6k-Hhm">
+                                            <rect key="frame" x="20" y="11" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yug-OZ-k6p">
+                                            <rect key="frame" x="258" y="11" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="2IV-7V-x8C" id="ujo-fH-fpp"/>
+                            <outlet property="delegate" destination="2IV-7V-x8C" id="8oY-Io-y59"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Select item" id="rkb-dn-Z26">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="u2W-Qc-OFC">
+                            <connections>
+                                <segue destination="Qqm-hH-7HN" kind="push" id="F6q-aA-TTx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0sZ-UN-18f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2193" y="-873"/>
+        </scene>
+        <!--Add New Item View Controller - Add a new item-->
+        <scene sceneID="389-PH-uHb">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vlc-Kx-RuI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="nkf-Pi-GWh" userLabel="Exit" sceneMemberID="exit"/>
+                <viewController id="Qqm-hH-7HN" customClass="CFIXAddNewItemViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aZd-j4-sAV"/>
+                        <viewControllerLayoutGuide type="bottom" id="oNo-Cs-2d5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Vg-ls-ajf">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Drink name" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Led-o2-oxc">
+                                <rect key="frame" x="27" y="95" width="702" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="iG4-Ej-RMw">
+                                <rect key="frame" x="94" y="144" width="580" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Coffee"/>
+                                    <segment title="Tea"/>
+                                    <segment title="Other"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add a new item" id="ijm-Ji-xdo">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="F5i-1r-UEc"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="lCy-Kx-YZI">
+                            <connections>
+                                <segue destination="nkf-Pi-GWh" kind="unwind" unwindAction="unwindToList:" id="Yh7-Jb-k1A"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="b6s-Gd-ZXT">
+                            <connections>
+                                <segue destination="nkf-Pi-GWh" kind="unwind" unwindAction="unwindToList:" id="yeJ-tx-gF1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="b6s-Gd-ZXT" id="tny-r1-6rl"/>
+                        <outlet property="drinkType" destination="iG4-Ej-RMw" id="MQl-1a-4m8"/>
+                        <outlet property="textField" destination="Led-o2-oxc" id="EEZ-6M-LRq"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3198" y="-873"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

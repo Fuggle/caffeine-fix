@@ -161,6 +161,8 @@
         <!--Add New Item View Controller - Add a new item-->
         <scene sceneID="57B-iK-pBk">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7C1-Gm-nRD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MfY-j6-zFo" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController id="6f7-g0-OrT" customClass="CFIXAddNewItemViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mEs-NP-jM9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -204,8 +206,6 @@
                         <outlet property="textField" destination="3bZ-AK-GpI" id="Hkg-9a-bb2"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7C1-Gm-nRD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="MfY-j6-zFo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1818" y="14"/>
         </scene>
